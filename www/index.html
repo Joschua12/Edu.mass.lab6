@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tela.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style media="screen">
+  #topindex {
+    background-color: #8ACBEE;
+  }
+  </style>
+
+
+</head>
+
+<body background="img/fundo.jpg">
+  <div class="container b-radius-top">
+    <div class="top-bar b-radius ">
+      <div class="top-content text-center">
+        <p>
+          <h3><font face="Helvetica">Bem-Vindo</font></h3></p>
+
+        </div>
+      </div>
+      <div class="site-header">
+        <!-- Nome do APP -->
+
+        <div class="site-name">
+          <div class="row">
+            <div class="col-xs-12" id="oque">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="topindex">
+                    <h4 class="panel-title">
+                      <h4>Educational Mass Spectrometry</h4>
+                      <h4 text-center>Pesquisa de informação básica</h4>
+                    </h4>
+                  </div>
+                  <p>
+                    <div class="alert alert-info" role="alert">
+                      <strong>Lembre-se</strong> Se você já fez a pesquisa, é só clicar em pular!
+                    </div></p>
+                    <form>
+                      <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="nome" class="form-control" id="nome" aria-describedby="emailHelp" placeholder="Digite seu nome">
+                      </div>
+                      <div class="form-group">
+                        <label for="mail">E-mail</label>
+                        <input type="email" class="form-control" id="mail" aria-describedby="mail" placeholder="Digite seu nome">
+                      </div>
+                      <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="cidade" class="form-control" id="cidade" aria-describedby="cidade" placeholder="Digite sua cidade">
+                      </div>
+                      <div class="form-group">
+                        <label for="curso">Curso ou aréa de atuação</label>
+                        <input type="curso" class="form-control" id="curso" aria-describedby="curso" placeholder="Digite seu curso ou área">
+                      </div>
+                      <div class="form-group">
+                        <label for="idade">Idade</label>
+                        <input type="idade" class="form-control" id="idade" aria-describedby="idade" placeholder="Digite seu idade">
+                      </div>
+                      <div class="form-group">
+                        <label for="porque">Por que baixou o APP?</label>
+                        <textarea id="porque" class="form-control" placeholder="Digite aqui"></textarea>
+                      </div>
+                      <button type="button" class="btn btn-primary" id="enviar" onclick="onClique()" name="button">Enviar</button>
+                      <a href="pages/inicial.html"><button type="button" class="btn btn-primary"name="button" >Pular</button></a>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+        	<script>
+        	  // Initialize Firebase
+        	  var config = {
+        	    apiKey: "AIzaSyBDn2Cc02XRoqQq8gpDbc3hHgUw4U1ZWho",
+        	    authDomain: "project-6331870938314979616.firebaseapp.com",
+        	    databaseURL: "https://project-6331870938314979616.firebaseio.com",
+        	    projectId: "project-6331870938314979616",
+        	    storageBucket: "project-6331870938314979616.appspot.com",
+        	    messagingSenderId: "266768574377"
+        	  };
+        	  firebase.initializeApp(config);
+        	</script>
+            <script src="js/pesquisa.js"></script>
+
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+          <!-- Include all compiled plugins (below), or include individual files as needed -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+        </body>
+        </html>

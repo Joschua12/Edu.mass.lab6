@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tela.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style media="screen">
+    #topindex {
+      background-color: #8ACBEE;
+    }
+  </style>
+</head>
+
+<body background="img/fundo.jpg">
+  <div class="container b-radius-top">
+    <div class="top-bar b-radius ">
+      <div class="top-content text-center">
+        <p>
+          <h3><font face="Helvetica">Sobre o aplicativo</font></h3></p>
+      </div>
+    </div>
+    <div class="site-header">
+      <!-- Nome do APP -->
+      <div class="site-name">
+        <div class="row">
+          <div class="col-xs-12" id="oque">
+            <div class="panel panel-default">
+              <div class="panel-heading" >
+                <h6>Agora vamos escolher o equipamento que será utilizado. Você devera colocar escolher o equipamento
+                que você ira analisar sua amostra</h6>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12" id="funcionamento">
+            <div class="panel panel-default">
+              <div class="panel-heading" id="topindex">
+                <h4><b>Escolher</b></h4>
+              </div>
+              <div class="panel-body text-center">
+                <select id="equipamento">
+                  <option value="GC-MS">GC-MS</option>
+                  <option value="LC-MS">LC-MS</option>
+                  <option value="LC-MS/MS">LC-MS/MS</option>
+                  <option value="FT-MS">FT-MS</option>
+                  <option value="LC-HRMS">LC-HRMS</option>
+                  <option value="DI-MS">DI-MS</option>
+                  <option value="??"></option>
+                </select>
+              </div>
+              <div class="panel-footer">
+                <a href="escolheramostra.html"><button type="button" class="btn btn-primary" name="button">Voltar</button></a>
+                  <a><button id="btpesquisar" type="button" class="btn btn-primary" name="button">Pesquisar</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+  $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+  }
+
+  var metodo = null;
+  var valor = null;
+  var matriz = null;
+  var equipamento = null;
+
+  $(document).ready(function(){
+    metodo = $.urlParam('metodo');
+    valor = $.urlParam('valor');
+    amostra = $.urlParam('amostra');
+    matriz = $.urlParam('matriz');
+  });
+
+  $('#btpesquisar').click(function(){
+    var equipamento = $('#equipamento').val();
+    var url = 'https://scholar.google.com.br/scholar?hl=pt-BR&q=';
+    url += (valor != null ? valor+'+': '');
+    url += (amostra != null ? amostra+'+' : '');
+    url += (matriz != null ? matriz+'+' : '');
+    url += (equipamento != null ? equipamento+'+' : '');
+    //url += valor+'+'+amostra+'+'+matriz+'+'+ equipamento;
+    window.location.href = url;
+  });
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tela.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style media="screen">
+
+  .espaço{
+    margin-top: 5px;
+  }
+
+  .botoes{
+    width: 38px;
+    background-color: #66b3ff;
+    border-radius: 10px;
+  }
+
+  </style>
+</head>
+<body background="img/fundo.jpg">
+  <div class="container b-radius-top" >
+    <div class="top-bar b-radius "  >
+      <div class="top-content text-center" >
+        <h3>Selecionar Matriz</h3>
+      </div>
+    </div>
+    <div class="site-header">
+      <!-- Nome do APP -->
+      <div class="site-name">
+        <div class="row">
+          <div class="col-xs-12" id="oque">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h6>
+                 Na Seleção de Amostras, será identificado o tipo de amostra a ser analisado. Para que isso ocorra de forma mais simples, é necessário escolher a opção abaixo que melhor se encaixe ao tipo de amostra que será analisado.
+                </h6>
+              </div>
+              <div class="panel-body">
+                <div class="container-fluid">
+                  <div class="row ">
+                    <div class="col-xs-3">
+                      <a href="#"><input type="image" class="button botoes" src="img/svgmatriz/air.svg" value="air"></a>
+                      <h6>Ar</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/box.svg" value="packaging">
+                      <h6>Embala-<p>gens</p></h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/dna.svg" value="biological">
+                      <h6>Material <p>Biologico</p>	</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/food.svg" value="food">
+                      <h6>Comida</h6>
+                    </div>
+                  </div>
+                  <div class="row espaço">
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/fossel.svg" value="fossils">
+                      <h6>Fósseis</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/ground.svg"value="ground">
+                      <h6>Terra</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/waste.svg" value="industrial waste">
+                      <h6>Resíduos <p>Industrial</p></h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svgmatriz/water.svg" value="water">
+                      <h6>Água</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <a href="alvo.html"><button type="button" class="btn btn-primary" name="button">Voltar</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+  }
+
+  var metodo = null;
+  var valor = null;
+  var amostra =null;
+
+  $(document).ready(function(){
+    metodo = $.urlParam('metodo');
+    valor = $.urlParam('valor');
+    amostra = $.urlParam('amostra');
+  });
+
+  $('input[type="image"]').click(function(){
+    var matriz = $(this).val();
+    var url = 'escolherequipamento.html';
+    url += '?metodo='+metodo+'&valor='+valor+'&amostra='+amostra+'&matriz='+matriz;
+    window.location.href = url;
+  });
+  </script>
+</body>
+</html>

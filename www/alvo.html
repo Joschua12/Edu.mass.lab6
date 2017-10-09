@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tela.css">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script language="JavaScript1.2">
+  <!--
+
+  function aparece() {
+
+    if (document.form1.um.selectedIndex == "0") {
+      $('.dois').show();
+
+    } else {
+      $('.dois').hide();
+    }
+  }
+  //-->
+  </script>
+
+  <style media="screen">
+  .espaço {
+    margin-top: 5px;
+  }
+  </style>
+</head>
+
+<body background="img/fundo.jpg">
+  <div class="container b-radius-top">
+    <div class="top-bar b-radius ">
+      <div class="top-content text-center">
+        <h3>Escolha de alvo</h3>
+      </div>
+    </div>
+    <div class="site-header">
+      <!-- Nome do APP -->
+      <div class="site-name">
+        <div class="row">
+          <div class="col-xs-12" id="oque">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h6>O preparo de amostras a serem utilizadas por alguma técnica é fundamental para que o experimento tenha sucesso. Existem de muitas técnicas, mas para começar
+                  Um preparo de amostra precisamos saber primeiro se a amostrar para em questão tem um algo especifico ou não, assim escolha uma das opções abaixo Target para amostras com alvo especifico
+                  Ou Untargeted para identificar toda a composição da amostra </h6>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    <h5>ESCOLHA UMA DAS OPÇÕES</h5>
+                  </div>
+                  <div class="panel-heading">
+                    <form name="form1">
+                      <select name="um" id="selecao" onchange="aparece();">
+                        <option value="1"> Target </option>
+                        <option value="2"> Untarget </option>
+                      </select>
+                    </form>
+                  </div>
+                  <div class="dois">
+                    <input type="text" name="" value="" id="target">
+                    <p><div class="alert alert-info" role="alert">
+                      <strong>Lembre-se: </strong> Para que a pesquisa seja mais ampla digite o alvo em Inglês</div>
+                    </div>
+                    </p>
+                  </div>
+                </div>
+                <button type="button" id="btamostra" class="btn btn-primary">Continuar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('#btamostra').click(function(){
+            var url = 'escolheramostra.html';
+            if ($('#selecao').val() == 1) {
+              url += '?metodo=target&valor=' + $('#target').val();
+            } else {
+              url += '?metodo=untarget&valor=untarget';
+            }
+            window.location.href = url;
+          });
+
+        });
+      </script>
+    </body>
+
+    </html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tela.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style media="screen">
+
+  .espaço{
+    margin-top: 5px;
+  }
+
+  .botoes{
+    width: 38px;
+    background-color: #66b3ff;
+    border-radius: 10px;
+  }
+
+  </style>
+</head>
+<body background="img/fundo.jpg">
+  <div class="container b-radius-top" >
+    <div class="top-bar b-radius "  >
+      <div class="top-content text-center" >
+        <h3>Selecionar Amostra</h3>
+      </div>
+    </div>
+    <div class="site-header">
+      <!-- Nome do APP -->
+      <div class="site-name" >
+        <div class="row">
+          <div class="col-xs-12" id="oque">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h6>
+                  Na seleção de amostra você irá identificar que tipo de amostra está preste a analisar, para que isso ocorra de maneira mais simples, escolha uma
+                  das opções abaixo que melhor se encaixe em seu tipo de amostra para que possamos seguir para a próxima etapa.
+                </h6>
+              </div>
+              <div class="panel-body">
+                <div class="container-fluid">
+                  <div class="row ">
+                    <div class="col-xs-3">
+                      <a href="#"><input type="image" class="button botoes" src="img/svg/steak.svg" value="proteins"></a>
+                      <h6>Proteínas</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/trigo.svg" value="peptides">
+                      <h6>Peptídeos</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/sugar.svg" value="sugarcane">
+                      <h6>Açucares</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/estomago.svg" value="Metabolites">
+                      <h6>Metabólitos</h6>
+                    </div>
+                  </div>
+                  <div class="row espaço">
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/ligacoes.svg" value="amino+acids">
+                      <h6>Aminoáci<p>dos</p></h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/charcoal.svg"value="hydrocarbons">
+                      <h6>Hidro-<p>carbonetos</p></h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/drugs.svg" value="drugs">
+                      <h6>Fármacos</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/droga.svg" value="vitamins">
+                      <h6>Drogas <p>ilicítas</p></h6>
+                    </div>
+                  </div>
+                  <div class="row espaço">
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/vitaminas.svg" value="vitamins">
+                      <h6>Vitaminas</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/suplement.svg"value="hormones">
+                      <h6>Hormônios</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/death.svg" value="pesticides">
+                      <h6>Pesticidas</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/sprout.svg" value="natural+products">
+                      <h6>Produtos naturais</h6>
+                    </div>
+                  </div>
+                  <div class="row espaço">
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/melancia.svg" value="organic+synthesis+products">
+                      <h6>Produtos de síntese orgânica</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/molecule.svg" value="synthetic+polymers">
+                      <h6>Polímeros sintéticos</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/florence.svg" value="forensic+samples">
+                      <h6>Amostras forenses</h6>
+                    </div>
+                    <div class="col-xs-3">
+                      <input type="image" class="button botoes" src="img/svg/oil.svg" value="lipids">
+                      <h6>Lipídios</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-footer">
+                <a href="alvo.html"><button type="button" class="btn btn-primary" name="button">Voltar</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  $.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    return results[1] || 0;
+  }
+
+  var metodo = null;
+  var valor = null;
+
+  $(document).ready(function(){
+    metodo = $.urlParam('metodo');
+    valor = $.urlParam('valor');
+  });
+
+  $('input[type="image"]').click(function(){
+    var amostra = $(this).val();
+    var url = 'Matriz.html';
+    url += '?metodo='+metodo+'&valor='+valor+'&amostra='+amostra;
+    window.location.href = url;
+  });
+  </script>
+</body>
+</html>

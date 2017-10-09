@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/tela.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style media="screen">
+    #topindex {
+      background-color: #8ACBEE;
+    }
+
+    button {
+      /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+      margin-left: .5em;
+    }
+  </style>
+</head>
+
+<body background="img/fundo.jpg">
+  <div class="container b-radius-top">
+    <div class="top-bar b-radius ">
+      <div class="top-content text-center">
+        <p>
+          <h4><font face="Helvetica">Faça sua pergunta</font></h4></p>
+      </div>
+    </div>
+    <div class="site-header">
+      <!-- Nome do APP -->
+      <div class="site-name">
+        <div class="row">
+          <div class="col-xs-12" id="oque">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center" id="topindex">
+                <h4><b>Sua perguta será enviada a um especialistas que atua na área de  Espectometria de Massas e a respostas será retornada pelo e-mail que dispor abaixo </b></h4>
+              </div>
+<p>
+              	<div>
+                <p> <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="nome" class="form-control" id="mainName" aria-describedby="emailHelp" placeholder="Digite seu nome">
+                  </div></p>
+                <p>    <div class="form-group">
+                    <label for="mail">E-mail</label>
+
+                    <input type="email" class="form-control" id="mainMail" aria-describedby="mail" placeholder="Digite seu nome">
+                  </div></p>
+                    <h4 text-center>pergunta</h4>
+              		<p><textarea id="mainText" placeholder="digite sua pergunta"></textarea>
+              	</div>
+               <button id="submitBtn" onclick="submitClick()"class="btn btn-primary">Continuar</button>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBDn2Cc02XRoqQq8gpDbc3hHgUw4U1ZWho",
+	    authDomain: "project-6331870938314979616.firebaseapp.com",
+	    databaseURL: "https://project-6331870938314979616.firebaseio.com",
+	    projectId: "project-6331870938314979616",
+	    storageBucket: "project-6331870938314979616.appspot.com",
+	    messagingSenderId: "266768574377"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<script src="js/index.js"></script>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
